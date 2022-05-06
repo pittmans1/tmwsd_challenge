@@ -1,1 +1,21 @@
-h1 TMWSD is #{adjective}!
+doctype html
+html    
+    head 
+        title ClaraPrice Challenge 
+        style  
+         include styles.css 
+    body 
+        h1.Header Welcome to the Self Destructing messages! 
+            .container 
+                form(method='Post',action='/message/add')
+                    label Title: 
+                        br 
+                        input.form-control(name='subject', type='text', style="width: 350px;")
+                    label Details: 
+                        br
+                        textarea.form-control(name='body', type='text', style="width: 350px; " placeholder="enter your deisred message here")
+                    input.btn(type='submit', value='Submit')
+            .container-lists 
+                ul 
+                    each message, i in messages
+                        a(href=`/messages/detail/${identifier}`): li = message.title
