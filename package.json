@@ -2,7 +2,10 @@
   "name": "tmwsd_challenge",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "engines": {
+    "node": "14.15.1"
+  },
+  "main": "app.js",
   "scripts": {
     "postinstall": "npm run build",
     "start": "node server.js"
