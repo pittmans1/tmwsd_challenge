@@ -27,6 +27,6 @@ app.use('/', messagesRoute)
 // pug engine setup
 app.set('view engine', 'pug')
 
-app.listen(port, () => {
+app.listen(process.env.Port, () => {
   console.log(`TMWSD is listening at http://localhost:${port}`)
 })
