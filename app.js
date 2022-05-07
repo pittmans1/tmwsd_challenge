@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose')
 const messagesRoute = require('./routes/messages')
 var bodyParser = require('body-parser')
@@ -27,6 +27,6 @@ app.use('/', messagesRoute)
 // pug engine setup
 app.set('view engine', 'pug')
 
-app.listen(process.env.Port, () => {
-  console.log(`TMWSD is listening at http://localhost:${port}`)
+app.listen(process.env.PORT, () => {
+  console.log(`TMWSD is listening at http://localhost:${PORT}`)
 })
